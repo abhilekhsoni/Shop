@@ -64,10 +64,13 @@ class Single_Cart_Product extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: new ListTile(
-        leading: new Image.asset(
-          cart_prod_picture,
-          width: 75,
-          height: 80,
+        leading: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: new Image.asset(
+            cart_prod_picture,
+            width: 75,
+            height: 80,
+          ),
         ),
         title: new Text(cart_prod_name),
         subtitle: new Column(
@@ -86,11 +89,11 @@ class Single_Cart_Product extends StatelessWidget {
                   ),
                 ),
                 new Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 8, 8, 8),
+                  padding: const EdgeInsets.fromLTRB(5, 8, 8, 8),
                   child: new Text("Color:"),
                 ),
                 new Padding(
-                  padding: const EdgeInsets.all(4),
+                  padding: const EdgeInsets.all(0.2),
                   child: new Text(
                     cart_prod_color,
                     style: TextStyle(color: Colors.deepPurpleAccent),
